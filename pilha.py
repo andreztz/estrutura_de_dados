@@ -15,7 +15,6 @@ Mecanismo de desfazer/refazer dos editores de texto;
 Navegação entre páginas Web;
 etc.
 
-Lembrar de uma pilha de pratos sujos que serão lavados.
 
 '''
 
