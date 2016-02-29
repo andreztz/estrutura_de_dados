@@ -24,13 +24,16 @@ class Stack:
 
     def __init__(self):
         self.stack = []
+        self.len_stack = 0
 
     def push(self, elem):
         self.stack.append(elem) # metodo append do objeto lista do python por padrão ja insere o elemento no final da lista.
+        self.len_stack += 1
 
     def pop(self):
         if not self.empty():
-            self.stack.pop(len(self.stack) -1) # o metodo pop do objeto lista do python ja remove o ultimo elemento por padrão (sem parametros).
+            self.stack.pop(self.len_stack - 1) # o metodo pop do objeto lista do python ja remove o ultimo elemento por padrão (sem parametros).
+            self.len_stack -= 1
 
     def top(self):
         if not self.empty():
@@ -38,12 +41,12 @@ class Stack:
         return None
 
     def empty(self):
-        if len(self.stack) == 0:
+        if self.len_stack == 0:
             return True
         return False
-    
+ 
     def length(self):
-        return len(self.stack)
+        return self.len_stack
 
 
 if __name__ == '__main__':
@@ -52,11 +55,5 @@ if __name__ == '__main__':
     s.push(2)
     s.push(3)
     print(s.length())
-    print(s.top())
-    print(s.empty())
-    print(s.top())
-    s.pop()
-    s.pop()
     s.pop()
     print(s.top())
-    print(s.length())
