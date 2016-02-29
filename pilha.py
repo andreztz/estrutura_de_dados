@@ -21,30 +21,58 @@ etc.
 
 class Stack:
 
+
     def __init__(self):
+        '''
+        Inicializa a pilha (self.stack) com um objeto list do python
+        e inicializa a variável (self.len_stack) que controla o estado
+        da pilha quanto ao seu tamanho.
+        '''
         self.stack = []
         self.len_stack = 0
 
     def push(self, elem):
-        self.stack.append(elem) # metodo append do objeto lista do python por padrão ja insere o elemento no final da lista.
+        '''
+        Insere um elemento na pilha.
+
+        O método append do objeto lista do python por
+        padrão insere o novo elemento no final da lista.
+        '''
+        self.stack.append(elem) #
         self.len_stack += 1
 
     def pop(self):
+        '''
+        Remove um elemento da pilha.
+        
+        O método pop do objeto lista do python por padrão
+        remove o último elemento da lista.
+        '''
         if not self.empty():
-            self.stack.pop(self.len_stack - 1) # o metodo pop do objeto lista do python ja remove o ultimo elemento por padrão (sem parametros).
+            self.stack.pop(self.len_stack - 1)
             self.len_stack -= 1
 
     def top(self):
+        '''
+        Retorna o elemento do topo da pilha.
+        
+        '''
         if not self.empty():
             return self.stack[-1] # retorna o elemento do top
         return None
 
     def empty(self):
+        '''
+        Verifica o estado da pilha (vazia ou não vazia).  
+        '''
         if self.len_stack == 0:
             return True
         return False
  
     def length(self):
+        '''
+        Retorna o tamanho da pilha.  
+        '''        
         return self.len_stack
 
 
