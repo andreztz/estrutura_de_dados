@@ -150,5 +150,6 @@ def main():
     lista.pop(3)
     lista.show()
     print('Tamanho da lista: {}'.format(lista.length()))
+
 if __name__ == '__main__':
     main()
