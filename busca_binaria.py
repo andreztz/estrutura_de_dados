@@ -35,9 +35,8 @@ class BinarySearchTree:
         # verifica se árvore está vazia
         if self.empty():
             self.root = node
-        else:
-            # árvore não vazia, insere recursivamente
 
+        else:# árvore não vazia, insere recursivamente
             dad_node = None
             curr_node = self.root
 
